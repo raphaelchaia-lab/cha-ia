@@ -32,6 +32,13 @@ Copie a pasta `cha-ia` para `~/.claude/skills/` (uso pessoal) ou para `.claude/s
 
 Os nomes dos menus podem mudar; em caso de dúvida, veja a central de ajuda do Claude (support.claude.com, artigos sobre skills).
 
+
+## Para conferir ementas palavra por palavra
+A leitura de páginas do Claude devolve uma versão processada do texto, então a skill só marca uma ementa como VERIFICADA quando a lê no original. Para isso, faça pelo menos uma destas coisas:
+- libere os domínios dos tribunais na lista de domínios permitidos das configurações de capacidades do Claude (por exemplo `scon.stj.jus.br`, `processo.stj.jus.br`, `ww2.stj.jus.br`, `portal.stf.jus.br`, `jurisprudencia.stf.jus.br` e o portal do seu TJ);
+- use o Claude com um navegador disponível (Claude no Chrome ou o navegador do app de desktop);
+- envie o PDF do acórdão na conversa.
+
 ## Limites
 - A skill não substitui o advogado: toda peça é minuta para revisão profissional.
 - Não há conector de jurisprudência brasileira: a verificação é feita nos portais oficiais pela pesquisa web.
