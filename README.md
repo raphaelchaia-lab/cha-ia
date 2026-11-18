@@ -10,7 +10,7 @@ contratos, preparação de audiência e revisão de artigos e livros.
 - `config/titular.md` — seus dados e preferências (preencher).
 - `assets/` — onde vai o seu papel timbrado (`timbrado.docx`).
 - `scripts/cha_docs.py` — gera a peça em DOCX e os relatórios em PDF sobre o seu timbrado.
-- `scripts/jurisprudencia.py` — busca no STJ e no TJMS (e-SAJ) e traz a ementa como publicada, com link do inteiro teor.
+- `scripts/jurisprudencia.py` — busca no STJ (e no TJMS, quando o portal aceitar acesso direto) e traz a ementa como publicada, com link do inteiro teor. Roteiro de teste por tribunal na seção 9A do `SKILL.md`.
 - `tests/` — critérios de aceitação e prompts de teste para homologar a skill.
 
 ## Instalação no Claude (claude.ai e app)
@@ -36,8 +36,8 @@ Os nomes dos menus podem mudar; em caso de dúvida, veja a central de ajuda do C
 
 ## Para conferir ementas palavra por palavra
 A leitura de páginas do Claude devolve uma versão processada do texto, então a skill só marca uma ementa como VERIFICADA quando a lê no original. Para isso, faça pelo menos uma destas coisas:
-- libere os domínios dos tribunais na lista de domínios permitidos das configurações de capacidades do Claude (por exemplo `scon.stj.jus.br`, `processo.stj.jus.br`, `ww2.stj.jus.br`, `jurisprudencia.stf.jus.br` e o portal do seu TJ). O STF bloqueia consultas automatizadas mesmo liberado; para ele, use navegador ou PDF;
-- use o Claude com um navegador disponível (Claude no Chrome ou o navegador do app de desktop);
+- libere os domínios do STJ na lista de domínios permitidos das configurações de capacidades do Claude (`scon.stj.jus.br`, `processo.stj.jus.br`, `ww2.stj.jus.br`) e o portal do seu TJ: o script `jurisprudencia.py` lê o STJ direto;
+- use o Claude com um navegador disponível. O STF e o TJMS bloqueiam consultas automatizadas mesmo com o domínio liberado, mas funcionam pelo navegador integrado do app de desktop; no STJ, se precisar do navegador, use o Claude no Chrome (o navegador integrado fica preso na verificação anti-robô);
 - envie o PDF do acórdão na conversa.
 
 ## Limites

@@ -17,8 +17,13 @@ Sintaxe de pesquisa:
 
 Status por portal (testado em 18/11/2026):
   STJ  - busca e inteiro teor (PDF) funcionando por acesso direto.
-  STF  - o portal bloqueia acesso automatizado (firewall F5, erro 403): usar navegador ou PDF.
-  TJMS - implementado no padrão e-SAJ; validar com o comando "teste" na primeira conversa.
+  STF  - o portal bloqueia acesso automatizado (firewall F5, erro 403): usar o navegador
+         integrado do app de desktop (testado: busca e ementa integral) ou o PDF.
+  TJMS - o servidor do e-SAJ derruba a conexão vinda do ambiente do Claude (connection reset),
+         mesmo com o domínio liberado: usar o navegador integrado (testado: busca e ementa
+         integral). A extração por script fica para quando o acesso direto funcionar.
+  Navegador no STJ: o navegador integrado fica em loop na verificação Cloudflare; se o script
+         falhar, usar o Claude no Chrome (navegador real do titular), que passa.
 """
 import argparse, datetime, html, json, re, shutil, subprocess, sys
 from pathlib import Path
@@ -211,8 +216,10 @@ def teste():
             res[nome] = "ok: ementa literal lida" if ok else "acesso ok, mas nenhuma ementa extraída"
         except Exception as e:
             res[nome] = f"falhou: {type(e).__name__}: {e}"
+            if nome == "TJMS":
+                res[nome] += " -> usar o navegador integrado (ver seção 9A da skill)"
     r = stf("teste")
-    res["STF"] = "bloqueado pelo portal: usar navegador ou PDF" if r.get("bloqueado") else str(r)
+    res["STF"] = "bloqueado pelo portal: usar o navegador integrado ou PDF (ver seção 9A da skill)" if r.get("bloqueado") else str(r)
     return res
 
 
