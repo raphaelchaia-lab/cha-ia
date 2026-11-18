@@ -12,15 +12,25 @@ contratos, preparação de audiência e revisão de artigos e livros.
 - `scripts/cha_docs.py` — gera a peça em DOCX e os relatórios em PDF sobre o seu timbrado.
 - `tests/` — critérios de aceitação e prompts de teste para homologar a skill.
 
-## Instalação no Claude
-1. Preencha `cha-ia/config/titular.md` e coloque o seu `timbrado.docx` em `cha-ia/assets/`.
-2. Compacte a pasta `cha-ia` em um .zip (a pasta inteira, com o `SKILL.md` dentro dela).
-3. No Claude, ative a execução de código e criação de arquivos e a pesquisa na web.
-4. Em Configurações > Capacidades > Skills, envie o .zip.
-5. Opcional: conecte o Google Drive para usar a biblioteca de modelos e o arquivo de peças.
-6. Numa conversa nova, digite `/setup` para testar pesquisa, timbrado e geração de arquivos.
+## Instalação no Claude (claude.ai e app)
 
-As opções de menu podem mudar; consulte a central de ajuda do Claude se não encontrar.
+O Claude não instala skills direto de um link do GitHub: a skill é enviada como arquivo .zip.
+
+**Instalação rápida**
+1. Baixe o `cha-ia.zip` na página de *Releases* deste repositório (ou use *Code > Download ZIP* e compacte só a pasta `cha-ia`).
+2. No Claude, abra **Customize > Skills**, clique em **+**, depois **Create skill** e **Upload a skill**, e envie o `cha-ia.zip`.
+3. Ative a execução de código e criação de arquivos e a pesquisa na web; conecte o Google Drive se quiser usar biblioteca de modelos e arquivo de peças.
+4. Numa conversa nova, digite `/setup`: o Cha.IA pergunta seus dados, devolve o `config/titular.md` preenchido e testa pesquisa, timbrado e geração de arquivos.
+
+**Instalação personalizada (recomendada)**
+1. Baixe o repositório, preencha `cha-ia/config/titular.md` e coloque o seu `timbrado.docx` em `cha-ia/assets/`.
+2. Compacte a pasta `cha-ia` a partir da pasta acima dela, de modo que o .zip contenha `cha-ia/SKILL.md` (o nome da pasta precisa ser `cha-ia`, igual ao campo `name` do `SKILL.md`).
+3. Envie o .zip como no passo 2 da instalação rápida. Para atualizar a configuração depois, gere um novo .zip e substitua a skill.
+
+**Claude Code**
+Copie a pasta `cha-ia` para `~/.claude/skills/` (uso pessoal) ou para `.claude/skills/` do projeto.
+
+Os nomes dos menus podem mudar; em caso de dúvida, veja a central de ajuda do Claude (support.claude.com, artigos sobre skills).
 
 ## Limites
 - A skill não substitui o advogado: toda peça é minuta para revisão profissional.
