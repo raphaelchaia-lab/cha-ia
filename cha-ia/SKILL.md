@@ -370,6 +370,8 @@ Resultado de referência (18/11/2026, ambiente do claude.ai com app de desktop):
 | TJMS | ❌ conexão derrubada pelo servidor | ✅ busca e ementa integral | não testado |
 | STF | ❌ bloqueado pelo portal | ✅ busca e ementa integral | não testado |
 
+Segunda rodada (18/11/2026, consulta "marco civil da internet"): resultado idêntico. STJ: 324 resultados pelo script e pelo Claude no Chrome, com a mesma ementa integral lida pelos dois caminhos (a reserva passou pela verificação automática sem desafio). TJMS: 259 resultados e ementa integral pelo navegador integrado. STF: 22 acórdãos e ementa integral pelo navegador integrado. Roteiro confirmado: STJ pelo script, com o Claude no Chrome como reserva; TJMS e STF pelo navegador integrado.
+
 ## 10. Gate final (checar antes de toda entrega de peça)
 
 - [ ] Inventário exaustivo feito e classificado; baseline congelada com IDs.
