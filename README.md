@@ -27,3 +27,7 @@ As opções de menu podem mudar; consulte a central de ajuda do Claude se não e
 - Não há conector de jurisprudência brasileira: a verificação é feita nos portais oficiais pela pesquisa web.
 - Prazos e cálculos sempre exigem conferência no sistema do tribunal.
 - Dados de clientes não devem ir para buscas públicas (a skill anonimiza as consultas).
+
+## Licença
+
+CC BY-NC-SA 4.0: pode usar e adaptar com crédito ao autor, sem fins comerciais, e as adaptações devem ser distribuídas sob a mesma licença. Veja o arquivo `LICENSE`.
