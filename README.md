@@ -17,7 +17,7 @@ contratos, preparação de audiência e revisão de artigos e livros.
 O Claude não instala skills direto de um link do GitHub: a skill é enviada como arquivo .zip.
 
 **Instalação rápida**
-1. Baixe o `cha-ia.zip` na página de *Releases* deste repositório (ou use *Code > Download ZIP* e compacte só a pasta `cha-ia`).
+1. Baixe o arquivo [`instalar/cha-ia.zip`](instalar/cha-ia.zip) deste repositório (botão *Download raw file*).
 2. No Claude, abra **Customize > Skills**, clique em **+**, depois **Create skill** e **Upload a skill**, e envie o `cha-ia.zip`.
 3. Ative a execução de código e criação de arquivos e a pesquisa na web; conecte o Google Drive se quiser usar biblioteca de modelos e arquivo de peças.
 4. Numa conversa nova, digite `/setup`: o Cha.IA pergunta seus dados, devolve o `config/titular.md` preenchido e testa pesquisa, timbrado e geração de arquivos.
