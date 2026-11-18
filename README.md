@@ -10,6 +10,7 @@ contratos, preparação de audiência e revisão de artigos e livros.
 - `config/titular.md` — seus dados e preferências (preencher).
 - `assets/` — onde vai o seu papel timbrado (`timbrado.docx`).
 - `scripts/cha_docs.py` — gera a peça em DOCX e os relatórios em PDF sobre o seu timbrado.
+- `scripts/jurisprudencia.py` — busca no STJ e no TJMS (e-SAJ) e traz a ementa como publicada, com link do inteiro teor.
 - `tests/` — critérios de aceitação e prompts de teste para homologar a skill.
 
 ## Instalação no Claude (claude.ai e app)
@@ -35,7 +36,7 @@ Os nomes dos menus podem mudar; em caso de dúvida, veja a central de ajuda do C
 
 ## Para conferir ementas palavra por palavra
 A leitura de páginas do Claude devolve uma versão processada do texto, então a skill só marca uma ementa como VERIFICADA quando a lê no original. Para isso, faça pelo menos uma destas coisas:
-- libere os domínios dos tribunais na lista de domínios permitidos das configurações de capacidades do Claude (por exemplo `scon.stj.jus.br`, `processo.stj.jus.br`, `ww2.stj.jus.br`, `portal.stf.jus.br`, `jurisprudencia.stf.jus.br` e o portal do seu TJ);
+- libere os domínios dos tribunais na lista de domínios permitidos das configurações de capacidades do Claude (por exemplo `scon.stj.jus.br`, `processo.stj.jus.br`, `ww2.stj.jus.br`, `jurisprudencia.stf.jus.br` e o portal do seu TJ). O STF bloqueia consultas automatizadas mesmo liberado; para ele, use navegador ou PDF;
 - use o Claude com um navegador disponível (Claude no Chrome ou o navegador do app de desktop);
 - envie o PDF do acórdão na conversa.
 
