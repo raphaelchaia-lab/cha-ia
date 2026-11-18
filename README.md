@@ -40,4 +40,4 @@ Os nomes dos menus podem mudar; em caso de dúvida, veja a central de ajuda do C
 
 ## Licença
 
-CC BY-NC-SA 4.0: pode usar e adaptar com crédito ao autor, sem fins comerciais, e as adaptações devem ser distribuídas sob a mesma licença. Veja o arquivo `LICENSE`.
+CC BY-NC-SA 4.0: pode usar e adaptar com crédito ao autor, sem fins comerciais, e as adaptações devem ser distribuídas sob a mesma licença. Veja os arquivos `LICENSE` e `NOTICE`. © 2026 Raphael Sérgio Rios Chaia Jacob.
