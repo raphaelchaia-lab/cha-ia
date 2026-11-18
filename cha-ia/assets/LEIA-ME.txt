@@ -1,0 +1,5 @@
+Coloque aqui o seu papel timbrado com o nome timbrado.docx.
+
+Como preparar: abra um documento do Word (ou Google Docs, exportando em .docx),
+configure cabeçalho, rodapé, margens e a fonte padrão do escritório, deixe o corpo
+vazio e salve. O Cha.IA escreve as peças, os relatórios e a matriz sobre ele.
